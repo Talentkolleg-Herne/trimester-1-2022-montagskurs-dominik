@@ -1,51 +1,55 @@
-meineVariable = "Hallo Welt"
-meineZahl = 11
+# Schere, Stein, Papier
 
-print(meineVariable)
-print(meineZahl)
+#figuren = ["Schere", "Stein", "Papier"]
+
+#print("0. Schere")
+#print("1. Stein")
+#print("2. Papier")
+#auswahl = 2
+
+#gegner = 2
 
 
-print("Zahl " + "5")
-print(10 + 5)
+#print("Meine Auswahl: " + figuren[auswahl])
+#print("Gegnerische Auswahl: " + figuren[gegner])
 
 
-# +
-# -
-# *
-# /
+# 14 : Mofa
+# 15: Roller
+# 16: Motorrad
+# 17: nur begleitetes fahren
+# 18: allein fahren
 
-alter = 24
-meinAlterInMonaten = alter * 12
-meinAlterInTagen = 24 * 365
-meinAlterInStunden = meinAlterInTagen * 24
-meinAlterInMinuten = meinAlterInStunden * 60
+alter = int(input("Bitte gebe ein wie alt du bist:"))
 
-print(24 * 12)
-print(meinAlterInMonaten)
-print(meinAlterInTagen)
+if alter >= 14:
+    print("Mofa")
+if alter >= 15:
+    print("Roller")
+if alter >= 16:
+    print("Motorrad")
+if alter == 17:
+    print("begleitetes fahren")
+elif alter >= 18:
+    print("Auto fahren")
 
-print(meinAlterInStunden)
-print(meinAlterInMinuten)
+# ==
+# !=
+# >
+# <
+# >=
+# <=
 
-# (1) Umrechnung von Celsius nach Kelvin
-# (2) Umrechnung von Celsius nach Fahrenheit
-# (3) Umrechnung von Kelvin nach Celsius
-# (4) Umrechnung von Kelvin nach Fahrenheit
-# (5) Umrechnung von Fahrenheit nach Celsius
-# (6) Umrechnung von Fahrenheit nach Kelvin
 
-# Celsius = 5/9 * (Fahrenheit - 32).
-# Celsius = Kelvin - 273.15.
-# Die tiefste mögliche Temperatur ist den absoluten Nullpunkt 0K.
-# °C = (°F - 32) * 5/9 (von Fahrenheit in Celsius) °F = °C * 1,8 + 32 (von Celsius nach Fahrenheit)
-# 20 = Kelvin - 273,15
+# user = input("Schere, Stein oder Papier:")
+# print(user)
 
-# 20 + 273,15 = Kelvin
 
-temperaturInCelsius = 20
+# int
+# float
+# string
+# boolean (True | False)
 
-celsiusNachKelvin = temperaturInCelsius + 273.15
-celsiusNachFahrenheit = (temperaturInCelsius * 1.8) + 32
 
-print(celsiusNachKelvin)
-print(celsiusNachFahrenheit)
+# Datenstruktur
+# Array

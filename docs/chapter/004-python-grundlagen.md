@@ -179,3 +179,122 @@ Schreibe ein Programm welches berechnet wie teuer ein Paket ist, wenn folgende A
 - Für Pakete bis 10 kg gibt es eine Gebühr von zusätzlich 3€
 - Für Pakete ab 10kg gibt es eine Gebühr von zusätzlich 3€ und pro KG nochmal 0,50 € dazu
 
+
+## Arrays
+Ein Array ist eine Möglichkeit unter einer Variable mehrere Werte zu addressieren. So brauchen wir aktuell um zum Beispiel die Werte für die Temperaturen der letzten Woche zu speichern insgesamt 7 Variablen. Leider können wir mit diesen Variablen nicht sehr dynamisch umgehen, da bei einem Zugriff auf eine Variable der Name der Variablen immer angegeben werden muss. Um die Werte also zum Beispiel alle zu addieren müssten wir die in unserem Fall die 7 Variablen zusammen addieren. Sobald wir jetzt aber ein weiteren Wert speichern wollen, müssen wir uns wieder eine neue Variable anlegen und das Programm ändern, so dass wir die neue Variable mit in die Berechnungen mit einbeziehen. 
+
+Um das einfacher und dynamischer zu halten kommen nun Arrays in spiel. Hiermit ist es möglich wie gesagt mehrere Werte über einen gemeinsamen Namen und einen Index zu definieren. So können wir uns zum Beispel die ersten 5 Ungerade Zahlen in einem Array so definieren:
+
+```python
+meineZahlen = [1,3,5,7,9]
+```
+> Ein Array wird wie eine Variable definiert, nur statt einen Wert anzugeben, können wir hier in Eckgen-Klammern mehrere Werte desselben Typs angeben.
+
+Die länge eines Arrays kann man sich in Python ebenfalls dynamisch Anzeigen lassen, indem man die in Python integrierte Funktion `len()` benutzt.
+
+```python
+meineZahlen = [1,2,3,5,7,9]
+print(len(meineZahlen))
+```
+
+
+## Schleifen
+Schleifen dienen in der Programmierung dazu Aufgaben zu bewältigen die öfters getan werden müssen. So ist bei einem Spiel immer so eine Schleife dabei die z.B. unseren Bildschirm immer neu lädt um so z.B. Dinge bewegen zu können. So kann man mit dem Schlüsselwort `while` so eine Schleife einleiten und dann in runden Klammern dahinter sofort die Bedingung definieren.
+
+### Die while-Schleife
+
+```python
+while(x < 1000):
+  # Wird solange ausgeführt wie die Bedingung (in den Klammern) wahr ist.
+```
+
+Also um ein kleines Beispiel zu machen, wollen wir nun die Zahlen von 1 bis 1000 ausgeben. Mit der alten weise müssten wir leider 1000x `print()` schreiben. Wir wollen das aber natürlich etwas vereinfachen und nehmen daher eine Schleife.
+
+```python
+x = 1; # wir wollen bei 1 anfangen
+
+while(x <= 1000): # solange x kleiner oder gleich ist als 1000 gehen wir in die Schleife
+  # wird solange ausgeführt wie die Variable x kleiner oder gleich 1000 ist. 
+  # Ausgabe der Variablen x
+  print(x)
+
+  # erhöhe x um eins um die Schleife auch irgendwann beenden zu können.
+  x = x + 1
+```
+
+### Die for-Schleife
+Die for-Schleife dient dazu über eine Sequenz zu iterieren. Das heißt bei jeden Schleifendurchlauf nimmt die Zählvariable jedes Element in der Datenstruktur einmal als Wert an.
+
+```python
+temp = [9, 11, 14, 16, 16, 15, 12, 15]
+
+for i in temp:
+    print(i)
+```
+> Ausgabe:
+9
+11
+14
+16
+16
+15
+12
+15
+
+
+## Aufgaben
+
+### Summe Berechnen
+Schreibe ein Programm, welches die Summe einer Zahlenfolge berechnet. Als Beispiel von 50 bis 200
+
+### Fibonacci Zahlen
+Gebe die Fibonacci Zahlen aus bis zu einer bestimmten Stelle.
+Die Fibonacci Zahlen werden wie folgt berechnet:
+
+1 1 2 3 5 8 11
+
+Man nimmt die erstren beiden Zahlen 1 + 1 wobei dann 2 rauskommt. Als nächstes rechnet man 1 + 2 wo dann drei rauskommt usw.
+
+### Fakultät berechnen
+Schreibe ein Programm, welches die Fakultät einer Zahl berechnet. Die Fakultät ist das Produkt einer Zahlenfolge.
+Beispiel Fakultät von 5
+1 * 2 * 3 * 4 * 5 = 120
+
+### Quersumme
+Lasse die Quersumme von einer bestimmten Zahl berechnen
+
+### Multiplizieren
+Versuche eine Multiplikation (* oder mal nehmen) ohne das * Zeichen zu schreiben
+
+### Dividieren
+Versuche eine Division (/ oder geteilt nehmen) ohne das / Zeichen zu schreiben
+
+### Modulo
+Versuche eine Modulo (% oder mal nehmen) ohne das % Zeichen zu schreiben
+
+
+
+
+### Funktionen
+Mittels Funktionen können Codeteile ausgelagert werden und zentral an einer Stelle zur Verfügung gestellt werden. Das ist von Vorteil, wenn man Code in einem Programm oft verwendet und daher den Code nur an einer Stelle updaten möchte. Desweiteren ist es mit Funktionen einfacher funktionalitäten zu teilen und anderen Bereit zustellen oder aber in diese Funktionen selber in anderen Projekten wiederzuverwenden.
+
+Um in Python eine Funktion zu erstellen, wird das Schlüsselwort `def` vor dem Namen der Funktion geschrieben. Danach kommen Klammern `()`. In diesen Klammern können nun Parameter definiert werden um bestimmte Variablen auch innerhalb der Funktion zur Verfügung zu haben. Die Funktion kann nach der definition aufgerufen werden, indem man den Namen mit den beiden Klammern schreibt.
+
+```python
+# definition der Funktion
+def meineFunktion():
+  print('Ich bin eine Funktion')
+
+
+# Aufruf der Funktion.
+meineFunktion()
+
+# definition der Funktion mit einem Parameter
+def meineFunktion2(meinParameter):
+  print(meinParameter)
+
+
+# Aufruf der Funktion mit Parameter
+# Hier wird in den Klammern der Wert eingetragen und kann in der Funktion benutzt werden
+meineFunktion2('hello')
+```
